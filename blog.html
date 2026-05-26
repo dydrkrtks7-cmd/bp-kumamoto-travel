@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!-- 필수 메타 태그 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 디자인 시스템 정보 (재사용) -->
+    <meta name="bpaas-design-system" content="brutalist-avantgarde">
+    <meta name="bpaas-design-theme" content="kr-neon-void">
+    <!-- 페이지 제목 (변경됨: 블로그) -->
+    <title>Kumamoto Blog | 이 미학적 혼돈 속에서 진정한 매력을 발견하다 </title>
+    <!-- 설명 (변경됨: Kumamoto 여행의 '진짜' 정보만 모았습니다...) -->
+    <meta name="description" content="쿠마모토 여행에 대한 '가짜' 정보는 집어치워라. 내가 직접 경험하고 검증한, 날카롭고 직설적인 쿠마모토 핵심 가이드와 인사이트를 지금 바로 뚫어져라 확인해봐. (PBN Tier 3 특화!)">
+    <!-- 키워드 (변경됨) -->
+    <meta name="keywords" content="Kumamoto travel blog, 쿠마모토 여행 블로그, 규슈 여행 후기, Kumamoto deep dive, 일본 현지 정보, Brutalist 가이드">
+    <!-- Canonical URL (가정: 이 페이지의 고유 주소로 변경) -->
+    <link rel="canonical" href="https://[YOUR-DOMAIN].com/kumamoto-blog/">
+    <!-- OG 메타 (재사용 및 강화) -->
+    <meta property="og:title" content="Kumamoto Travel Guide | 이 미학적 혼돈 속에서 진정한 매력을 발견하다 ">
+    <meta property="og:description" content="흔해 빠진 가이드북? 웃기시지 않나요? 내가 수집한 희귀하고 날카로운 인사이트로 쿠마모토의 '찐'을 건져드립니다. PBN Tier 3 승인 완료!">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://[YOUR-DOMAIN].com/kumamoto-blog/">
+    <!-- OG 이미지 (실제 이미지가 없으므로 Placeholder 유지) -->
+    <meta property="og:image" content="https://[YOUR-DOMAIN].com/images/kumamoto_brutalist_main.jpg">
+</head>
+<body>
+
+    <!-- ------------------------------------------ -->
+    <!-- NAVIGATION BAR (재사용) -->
+    <!-- ------------------------------------------ -->
+    <header class="header neon-void-bg border-b-4 border-red-500 shadow-2xl sticky top-0 z-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center py-3">
+            <!-- 로고/타이틀 (브루탈리스트 스타일) -->
+            <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-red-400 uppercase drop-shadow-[0_4px_6px_rgba(239,68,68,0.7)]">
+                KUMAMOTO <span class="text-neon-blue ml-1">//</span> BLOG
+            </h1>
+
+            <!-- 네비게이션 링크 (Desktop) -->
+            <nav class="hidden md:flex space-x-8 font-mono text-lg tracking-wider uppercase">
+                <a href="/" class="text-white hover:text-red-400 transition duration-200 border-b-2 border-transparent hover:border-red-500 pb-1">HOME</a>
+                <a href="/guides" class="text-white hover:text-red-400 transition duration-200 border-b-2 border-transparent hover:border-red-500 pb-1">GUIDES</a>
+                <a href="/blog" class="text-red-400 font-bold border-b-2 border-neon-blue pb-1 shadow-lg shadow-neon-blue/50">BLOG (현재)</a>
+                <a href="/about" class="text-white hover:text-red-400 transition duration-200 border-b-2 border-transparent hover:border-red-500 pb-1">ABOUT ME</a>
+            </nav>
+
+            <!-- 햄버거 메뉴 버튼 (Mobile) -->
+            <button id="hamburger-menu" class="md:hidden p-3 rounded-lg bg-red-600 text-white hover:bg-red-700 transition duration-200 shadow-xl">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-4 6h7"></path></svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- 모바일 메뉴 드롭다운 (초기 숨김) -->
+    <div id="mobile-menu" class="hidden md:hidden bg-gray-800 border-t-4 border-red-500 shadow-lg">
+        <a href="/" class="block px-6 py-3 text-white hover:bg-red-900 transition duration-150 border-b border-gray-700">HOME</a>
+        <a href="/guides" class="block px-6 py-3 text-white hover:bg-red-900 transition duration-150 border-b border-gray-700">GUIDES</a>
+        <a href="/blog" class="block px-6 py-3 text-red-400 bg-red-900/50 font-bold transition duration-150">BLOG (현재)</a>
+        <a href="/about" class="block px-6 py-3 text-white hover:bg-red-900 transition duration-150 border-b border-gray-700">ABOUT ME</a>
+    </div>
+
+    <!-- ------------------------------------------ -->
+    <!-- MAIN CONTENT AREA (브루탈리스트 카드 레이아웃) -->
+    <!-- ------------------------------------------ -->
+    <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+        <!-- 헤더 섹션: 페이지 소개 및 메인 타이틀 -->
+        <header class="text-center mb-12 border-b-8 border-neon-blue pb-6 bg-gray-900/70 p-6 shadow-[0_10px_30px_rgba(255,0,130,0.3)]">
+            <h2 class="text-6xl md:text-8xl font-black uppercase mb-2 tracking-tighter text-white drop-shadow-[0_6px_10px_#FF0082]">
+                KUMAMOTO
+            </h2>
+            <p class="text-3xl text-red-400 font-extrabold mt-1 uppercase tracking-widest">
+                // BLOG: 팩트 폭격기 모드 ON
+            </p>
+            <!-- 목적 명시 (직설적 어조) -->
+            <p class="mt-3 text-lg italic text-gray-300 font-mono">
+                "흔한 추천 리스트? 그건 그냥 관광객용 똥글이지. 여기선 진짜 '킬러 콘텐츠'만 보여쥴 테니, 각오 단단히 해라."
+            </p>
+        </header>
+
+        <!-- 메인 포스팅 섹션 (가장 중요한 글) -->
+        <section class="mb-16">
+            <!-- 카드 컨테이너: 브루탈리스트 박스 스타일 -->
+            <article class="bg-gray-800 p-6 md:p-10 border-4 border-red-500 shadow-[0_15px_40px_rgba(239,68,68,0.5)] hover:shadow-[0_20px_50px_rgba(239,68,68,0.7)] transition duration-300 transform hover:-translate-y-1">
+                
+                <!-- 포스팅 메타 정보 -->
+                <div class="flex justify-between items-center mb-4 border-b border-gray-700 pb-3">
+                    <span class="text-sm font-mono text-neon-blue uppercase tracking-widest bg-red-600/20 px-3 py-1 rounded-md">POST #001</span>
+                    <div class="flex items-center space-x-4 text-gray-400">
+                        <span class="text-sm font-bold border-l-2 pl-3 border-red-500">BY: B.Bro</span>
+                        <span>| 2024.07.18</span>
+                    </div>
+                </div>
+
+                <!-- 제목 (강렬하게) -->
+                <h3 class="text-4xl md:text-6xl font-extrabold mb-4 leading-tight text-white uppercase drop-shadow-[0_3px_5px_rgba(255,0,130,0.5)]">
+                    쿠마모토 '진짜' 맛집 7곳: 관광객 코스? 그냥 B급이지. (찐 현지인 검증 완료)
+                </h3>
+
+                <!-- 요약/리드 문구 (직설적인 어조) -->
+                <p class="text-xl text-gray-300 mb-6 italic border-l-4 border-neon-blue pl-4 font-light">
+                    "규슈 여행 가면 '이치란 본점'만 가서 시간 낭비 하지 마라. 진짜 맛있는 건, 숨겨진 골목에 있다. 내가 샅샅이ᅵ 뒤져서 뽑아냈다. 이걸 안 먹고 쿠마모토 왔다면, 너는 아직 태그라인도 못 봤다는 뜻이다."
+                </p>
+
+                <!-- 본문 미리보기 -->
+                <div class="space-y-4 text-gray-300 leading-relaxed">
+                    <p><strong class="text-red-400 block mb-1">//  첫 번째 경고: '가장 유명한' 건 항상 함정이다.</strong> 시내 중심의 명소는 기본 옵션일 뿐, 진정한 맛은 외곽에 있다. 특히 카와구치 지역 쪽을 노려라.</p>
+                    <p>첫 번째 타겟은 해산물 전문점인 '미야자키 식당'. 평범한 비주얼? 웃기지 마라. 입에 넣는 순간, 바다의 광포함이 터져 나온다. (재방문 의사 100%)</p>
+                    <p><strong class="text-red-400 block mb-1">// ⚔️ 두 번째 공략: 현지인들의 '비밀 병기'</strong>... 이건 말로 표ᅭ현할 수 없다. 그냥 가서 시키고 먹어라. 그걸 모르면, 너는 쿠마모토의 반쪽짜리 여행을 하는 거다.</p>
+                    <a href="/kumamoto-blog/001" class="inline-block mt-6 px-8 py-3 text-xl font-bold uppercase bg-neon-blue text-gray-900 hover:bg-red-500 transition duration-300 shadow-lg border-2 border-white transform hover:scale-[1.02]">
+                         전체 글 읽고 미학적 혼돈에 빠지기
+                    </a>
+                </div>
+
+            </article>
+        </section>
+
+<!-- SEO Visual 2: 정보 Brutalist Typography Cards -->
+<div class="seo-visual-cards" role="img" aria-label="Kumamoto travel 안내 정보 — 신뢰할 수 있는 서비스" 
+     style="display:flex;flex-direction:column;gap:80px;margin:120px auto;max-width:1100px;padding:0 24px">
+  <div style="display:flex;flex-direction:column;align-items:flex-start;background:transparent;padding:0;border:none;box-shadow:none">
+    <div style="font-family:serif;font-weight:900;font-size:3.5rem;color:#000000;line-height:1;margin-bottom:12px;letter-spacing:-0.03em">01</div>
+    <div style="font-weight:800;font-size:1.6rem;color:#000000;letter-spacing:-0.02em;margin-bottom:8px">특화</div>
+    <div style="font-family:monospace;font-size:0.75rem;letter-spacing:0.2em;color:#666666;text-transform:uppercase">Kumamoto travel 안내</div>
+  </div><div style="display:flex;flex-direction:column;align-items:flex-start;background:transparent;padding:0;border:none;box-shadow:none">
+    <div style="font-family:serif;font-weight:900;font-size:3.5rem;color:#000000;line-height:1;margin-bottom:12px;letter-spacing:-0.03em">02</div>
+    <div style="font-weight:800;font-size:1.6rem;color:#000000;letter-spacing:-0.02em;margin-bottom:8px">다수 실적</div>
+    <div style="font-family:monospace;font-size:0.75rem;letter-spacing:0.2em;color:#666666;text-transform:uppercase">Kumamoto travel 안내</div>
+  </div><div style="display:flex;flex-direction:column;align-items:flex-start;background:transparent;padding:0;border:none;box-shadow:none">
+    <div style="font-family:serif;font-weight:900;font-size:3.5rem;color:#000000;line-height:1;margin-bottom:12px;letter-spacing:-0.03em">03</div>
+    <div style="font-weight:800;font-size:1.6rem;color:#000000;letter-spacing:-0.02em;margin-bottom:8px">고품질</div>
+    <div style="font-family:monospace;font-size:0.75rem;letter-spacing:0.2em;color:#666666;text-transform:uppercase">Kumamoto travel 안내</div>
+  </div>
+</div>
+
+        <!-- 다른 포스팅 목록 (Grid Layout) -->
+        <section class="mt-12">
+            <h3 class="text-4xl font-black mb-8 text-center uppercase tracking-tight text-white border-b-4 border-gray-700 pb-2 inline-block mx-auto shadow-[0_5px_15px_rgba(239,68,68,0.5)]">
+                MORE RAW INSIGHTS (다른 날 것의 인사이트)
+            </h3>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- 카드 2: 문화/역사 포스팅 -->
+                <div class="bg-gray-800 p-6 border-4 border-neon-blue shadow-[0_10px_30px_rgba(239,68,68,0.3)] hover:border-red-500 transition duration-300 transform hover:-translate-y-0.5">
+                    <div class="text-right mb-3">
+                        <span class="text-sm font-mono text-neon-blue uppercase tracking-widest">ARTICLE</span>
+                        <p class="text-xs text-gray-400 mt-1">History // Culture</p>
+                    </div>
+                    <h4 class="text-2xl font-bold mb-3 leading-snug text-white hover:text-red-400 transition duration-200 cursor-pointer">
+                        쿠마모토성, 그 '허세' 속에 숨겨진 진실 (feat. 왜 이 건물이 대단한가)
+                    </h4>
+                    <p class="text-gray-300 text-sm mb-4 line-clamp-3">겉만 번지르르하다고 생각했나? 브루탈리스트 시선으로 쿠마모토성의 구조와 시대적 배경을ᆯ 해부해봤다. 이 벽돌 하나하나에 담긴 서사, 궁금하지 않냐?</p>
+                    <a href="/kumamoto-blog/002" class="text-red-400 font-bold hover:underline text-sm flex items-center">
+                        READ NOW ➔
+                    </a>
+                </div>
+
+                <!-- 카드 3: 여행 팁 포스팅 -->
+                <div class="bg-gray-800 p-6 border-4 border-red-500 shadow-[0_10px_30px_rgba(239,68,68,0.3)] hover:border-neon-blue transition duration-300 transform hover:-translate-y-0.5">
+                    <div class="text-right mb-3">
+                        <span class="text-sm font-mono text-red-400 uppercase tracking-widest">TIPS</span>
+                        <p class="text-xs text-gray-400 mt-1">Logistics // Budget</p>
+                    </div>
+                    <h4 class="text-2xl font-bold mb-3 leading-snug text-white hover:text-red-500 transition duration-200 cursor-pointer">
+                        규슈 여행, 렌터카 vs 대중교통? (feat. 이 버스 노선은 무조건 타야 함)
+                    </h4>
+                    <p class="text-gray-300 text-sm mb-4 line-clamp-3">"어디로 갈지 모르겠다"고? 걱정 마라. 네가 낭비할 시간과 돈을 최소화하는 최적의 이동 경로를 내가 정해줬다. 그냥 따라와.</p>
+                    <a href="/kumamoto-blog/003" class="text-neon-blue font-bold hover:underline text-sm flex items-center">
+                        SEE ROUTE ➔
+                    </a>
+                </div>
+
+                <!-- 카드 4: 체험 리뷰 포스팅 -->
+                <div class="bg-gray-800 p-6 border-4 border-red-500 shadow-[0_10px_30px_rgba(239,68,68,0.3)] hover:border-neon-blue transition duration-300 transform hover:-translate-y-0.5">
+                    <div class="text-right mb-3">
+                        <span class="text-sm font-mono text-red-400 uppercase tracking-widest">REVIEW</span>
+                        <p class="text-xs text-gray-400 mt-1">Experience // Food</p>
+                    </div>
+                    <h4 class="text-2xl font-bold mb-3 leading-snug text-white hover:text-red-500 transition duration-200 cursor-pointer">
+                        쿠마모토 지역 '장인 정신' 체험기 (도자기 & 사케 시음)
+                    </h4>
+                    <p class="text-gray-300 text-sm mb-4 line-clamp-3">단순히 먹고 보는 걸 넘어, 직접 만들고 맛보는 경험. 장인의 손길아 느껴지는 현지 공방 투어 후기다. 뽕 뽑을 각.</p>
+                    <a href="/kumamoto-blog/004" class="text-neon-blue font-bold hover:underline text-sm flex items-center">
+                        CHECK IT OUT ➔
+                    </a>
+                </div>
+
+            </div> <!-- End Grid -->
+        
+<div class="seo-visual-divider" role="separator" aria-label="Kumamoto travel 안내 구분선" style="margin:80px 0;height:1px;background:#666666;opacity:0.1"></div>
+</section>
+
+    </main> <!-- End Main Content Area -->
+
+    <!-- ------------------------------------------ -->
+    <!-- FOOTER (재사용) -->
+    <!-- ------------------------------------------ -->
+    <footer class="bg-gray-900 border-t-8 border-red-500 py-10 mt-12 shadow-[0_-15px_40px_rgba(239,68,68,0.5)]">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center md:flex md:justify-between md:items-center border-b pb-6 mb-6 border-gray-700">
+            </body>
+</html>
