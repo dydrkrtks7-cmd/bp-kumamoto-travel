@@ -1,10 +1,5 @@
 User-agent: *
 Allow: /
 
-User-agent: Googlebot
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-Sitemap: https://kumamoto-travel-guide.pbn-builder.xyz/sitemap.xml
+Sitemap: https://dangsan-massage-note.ishikyujin.space/sitemap.xml
+Sitemap: https://dangsan-massage-note.ishikyujin.space/sitemap-pages.xml
