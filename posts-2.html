@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>글 목록 (2/2) · kumamoto-travel</title>
+  <meta name="description" content="kumamoto-travel에 올라온 글 목록입니다.">
+  <link rel="canonical" href="https://kumamoto-travel-guide.pbn-builder.xyz/posts-2.html">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <style>
+ /* ------------------------------------------ */
+ /* COLOR & FONT DEFINITIONS (neon-void) */
+ /* ------------------------------------------ */
+ :root {
+ --color-primary: #000000;
+ --color-secondary: #ffffff;
+ --color-accent: #ff3b00;
+ --font-impact: 'Impact', 'system-ui', sans-serif;
+ /* ------------------------------------------ */
+ }
+
+ /* ------------------------------------------ */
+ /* BASE STYLING & TYPEFACE */
+ /* ------------------------------------------ */
+ * {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ }
+
+ body {
+ background-color: var(--color-primary);
+ color: var(--color-secondary);
+ font-family: var(--font-impact);
+ line-height: 1.45;
+ /* Raw Texture Simulation: Subtle noise/scanlines feel */
+ background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+ background-size: 100% 4px;
+ }
+
+ a {
+ color: var(--color-accent);
+ text-decoration: none;
+ transition: color 0.1s ease;
+ border-bottom: 2px solid rgba(255, 59, 0, 0.6); /* Subtle border for links */
+ }
+
+ a:hover {
+ color: #ff8c00; /* Slightly lighter orange on hover */
+ border-bottom-color: var(--color-accent);
+ }
+
+ /* Typography Scaling (Oversized) */
+ h1, h2, h3, h4 {
+ font-weight: 900; /* Ensure Impact is fully utilized */
+ line-height: 1.1;
+ margin-bottom: 0.5rem;
+ text-transform: uppercase;
+ }
+
+ h1 { font-size: clamp(3.5rem, 8vw, 7rem); } /* > 3rem */
+ h2 { font-size: clamp(2.5rem, 6vw, 4rem); margin-top: 2rem; }
+ h3 { font-size: clamp(1.8rem, 4vw, 3rem); }
+ h4 { font-size: clamp(1.2rem, 2.5vw, 2rem); }
+
+ /* Layout & Spacing */
+ body {
+ padding: 72px; /* SPACE: airy padding */
+ }
+
+ section {
+ padding: 72px 0; /* SECTION: airy padding (within content blocks) */
+ gap: 48px; /* GAP: airy gap */
+ margin-bottom: 120px; /* Section-Gap: larger separation between main sections */
+ border: 3px solid var(--color-accent); /* Visible border */
+ padding: 72px; /* Internal padding */
+ }
+
+ /* --- Header & Nav Styling --- */
+ header {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ border-bottom: 5px solid var(--color-accent);
+ padding-bottom: 20px;
+ margin-bottom: -72px; /* Pull header up over the main content padding */
+ }
+
+ .logo h1 {
+ font-size: clamp(3rem, 8vw, 5rem);
+ text-shadow: 4px 4px 0 var(--color-accent); /* Raw shadow effect */
+ letter-spacing: -2px;
+ }
+
+ nav ul {
+ list-style: none;
+ display: flex;
+ gap: 30px;
+ }
+
+ nav a {
+ font-size: 1.2rem;
+ font-weight: bold;
+ padding: 5px 10px;
+ border-bottom: 4px solid var(--color-primary); /* Deeper underline */
+ transition: border-bottom 0.2s ease;
+ }
+
+ nav a:hover {
+ background-color: rgba(255, 59, 0, 0.15);
+ border-bottom-color: var(--color-accent);
+ }
+
+ /* Hamburger Menu */
+ .hamburger {
+ display: none; /* Hidden by default on desktop */
+ cursor: pointer;
+ font-size: 3rem;
+ line-height: 1;
+ text-align: center;
+ padding: 0 20px;
+ }
+
+ /* --- Hero Section --- */
+ .hero {
+ background: linear-gradient(135deg, #ff3b00 0%, #e61f00 70%, #c91a00 100%); /* High Saturation Accent Fill */
+ border: 4px solid var(--color-secondary); /* White border */
+ transform: skewX(-5deg); /* Skewed element */
+ padding: 150px 80px; /* Increased padding for dramatic effect */
+ text-align: center;
+ box-shadow: 10px 10px 0 var(--color-primary), -10px -10px 0 rgba(255, 255, 255, 0.4); /* Brutalist Shadow */
+ }
+
+ .hero h1 {
+ color: var(--color-secondary);
+ text-shadow: 6px 6px 0 var(--color-primary); /* Deeper shadow for contrast */
+ margin-bottom: 0.2rem;
+ }
+
+ .hero p {
+ font-size: clamp(1.5rem, 3vw, 2.5rem);
+ color: rgba(255, 255, 255, 0.9);
+ margin-bottom: 40px;
+ }
+
+ /* --- Content Blocks & Grid --- */
+ .content-grid {
+ display: grid;
+ grid-template-columns: repeat(12, 1fr);
+ gap: 48px; /* Consistent gap */
+ align-items: start;
+ }
+
+ .main-info-block {
+ grid-column: span 9; /* Takes up most space */
+ border-left: 5px solid var(--color-accent);
+ padding-left: 30px;
+ }
+
+ .side-links-block {
+ grid-column: span 3; /* Smaller sidebar/link area */
+ display: flex;
+ flex-direction: column;
+ gap: 25px;
+ }
+
+ /* --- UGC Review Cards --- */
+ .review-card {
+ background-color: rgba(255, 255, 255, 0.08); /* Slightly transparent background */
+ border: 3px solid var(--color-accent);
+ padding: 25px;
+ transform: rotate(1deg); /* Subtle rotation */
+ box-shadow: 6px 6px 0 var(--color-primary); /* Strong shadow */
+ }
+
+ .card-header {
+ display: flex;
+ justify-content: space-between;
+ margin-bottom: 15px;
+ }
+
+ .card-nickname {
+ font-size: 1.3rem;
+ color: var(--color-accent);
+ font-weight: bold;
+ }
+
+ .card-date {
+ font-size: 0.9rem;
+ opacity: 0.8;
+ }
+
+ .stars {
+ color: #ffdd44; /* Gold/Yellow for stars */
+ font-size: 1.3rem;
+ letter-spacing: 2px;
+ }
+
+ .review-body {
+ margin-bottom: 15px;
+ font-size: 1.05rem;
+ border-top: 1px dashed rgba(255, 255, 255, 0.3);
+ padding-top: 15px;
+ }
+
+ /* --- Footer Styling --- */
+ footer {
+ text-align: center;
+ border-top: 8px solid var(--color-accent);
+ padding-top: 40px;
+ margin-bottom: -72px; /* Pull footer up */
+ font-size: 1rem;
+ opacity: 0.9;
+ }
+
+ /* ========================================= */
+ /* MEDIA QUERIES (RESPONSIVENESS) */
+ /* ========================================= */
+ @media (max-width: 1024px) {
+ .hero {
+ padding: 120px 50px;
+ transform: skewX(-3deg); /* Less aggressive skew on mid-size screens */
+ }
+ section {
+ gap: 32px;
+ padding: 60px;
+ }
+ }
+
+ @media (max-width: 768px) {
+ /* Hamburger Menu Activation */
+ .hamburger {
+ display: block;
+ }
+
+ nav {
+ position: absolute;
+ top: 120px; /* Height of header area + padding */
+ left: 0;
+ width: 100%;
+ flex-direction: column;
+ align-items: center;
+ background-color: rgba(0, 0, 0, 0.95);
+ border-top: 3px solid var(--color-accent);
+ padding: 20px 0;
+ box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8);
+ }
+
+ nav ul {
+ flex-direction: column;
+ gap: 15px;
+ width: 100%;
+ }
+
+ nav a {
+ display: block; /* Full width links in mobile menu */
+ text-align: center;
+ padding: 10px 0;
+ border-bottom: 2px solid var(--color-accent);
+ }
+
+ /* Layout Collapse */
+ header {
+ padding: 0 20px;
+ flex-wrap: wrap;
+ }
+ .logo h1 {
+ margin-bottom: 10px;
+ }
+
+ /* Main Content Stack */
+ .main-info-block, .side-links-block {
+ grid-column: span 12; /* Full width stacking */
+ border-left: none;
+ padding-left: 0;
+ }
+ .main-info-block {
+ border-bottom: 5px solid var(--color-accent); /* Move accent to bottom on stack */
+ padding-bottom: 30px;
+ }
+
+ }
+ </style>
+  <meta property="og:title" content="글 목록 (2/2) · kumamoto-travel">
+  <meta property="og:description" content="kumamoto-travel에 올라온 글 목록입니다.">
+  <meta property="og:url" content="https://kumamoto-travel-guide.pbn-builder.xyz/posts-2.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+</head>
+<body>
+  <div class="container">
+    
+    <main>
+      <h1>글 목록</h1>
+      <p>전체 33개 · 2/2 페이지</p>
+      <ul class="post-list">
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0113.html">Kumamoto travel 안내 및 셔츠룸 이용 시 주의사항 체크리스트</a>
+        <p class="post-item__summary">낯선 도시에서의 밤은 누구에게나 설레는 경험이지만, 준비되지 않은 방문객에게는 혼란의 연속일 수 있습니다. 특히 Kumamoto travel 안내 정보를 찾는 초행자라면 현지 문화와 유흥 시스템의 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0441.html">Kumamoto travel 안내 망원 노래방 추천정보와 이용 가이드</a>
+        <p class="post-item__summary">오랜만에 만난 지인들과 저녁 식사를 마친 뒤 흥을 돋우기 위해 노래방을 찾는 경우가 많습니다. 낯선 여행지를 방문할 때와 달리 평소 지내는 동네에서도 막상 적절한 장소를 찾으려면 혼란스러울 때가 생</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0442.html">Kumamoto travel 안내 홍대 노래방 추천정보 확인법</a>
+        <p class="post-item__summary">홍대 노래방은 언제나 화려한 조명과 음악으로 가득 차 있어 밤늦게까지 사람들의 발길이 끊이지 않습니다. 일부 사람들은 이곳이 무조건 밤늦게 가야 즐겁다고 생각하지만, 사실 이는 큰 오해 중 하나입니</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0443.html">Kumamoto travel 안내 공덕 셔츠룸 추천정보 선택 가이드</a>
+        <p class="post-item__summary">공덕 지역에서 셔츠룸을 이용하기 위해서는 몇 가지 필수적인 조건을 만족해야 원활한 진행이 가능합니다. 우선 방문 인원수와 연령대 구성을 명확히 파악하고, 예약 가능한 시간대를 확보하는 것이 기본입니</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0444.html">Kumamoto travel 안내 및 연남 유흥 추천정보 가이드</a>
+        <p class="post-item__summary">낯선 도시를 여행할 때처럼 밤 문화를 탐색하는 일은 언제나 설레면서도 고민스러운 과정입니다. 과연 지금 이 순간 내가 선택한 장소가 즐거운 시간을 보장해 줄 수 있을까요? 일본 여행을 준비하는 분들</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0445.html">Kumamoto travel 안내를 통한 마곡 가라오케 추천정보 선별법</a>
+        <p class="post-item__summary">해외여행을 계획할 때 신뢰할 수 있는 정보를 찾는 과정은 Kumamoto travel 안내 사례에서 보듯 매우 중요하다. 마곡 지역에서 가라오케를 선택할 때도 이러한 정보의 신뢰성을 판별하는 체계적</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0446.html">Kumamoto travel 안내 기반 마곡 유흥 추천정보 요약</a>
+        <p class="post-item__summary">새로운 장소를 선택할 때 가격 위주의 가성비 중심 모델과 서비스의 질을 강조하는 가심비 모델 사이에서 고민하게 됩니다. 해외여행을 위해 Kumamoto travel 안내 자료를 보며 예산을 산출하듯</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0447.html">Kumamoto travel 안내만큼 중요한 합정 노래방 추천정보와 예약</a>
+        <p class="post-item__summary">여행을 떠나기 전 Kumamoto travel 안내를 확인하지 않으면 당황스러운 상황을 겪듯, 노래방 방문도 준비 없이 나서면 실패하기 쉽다. 많은 이들이 실패하는 지점은 예약 시스템을 가볍게 여기</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0448.html">Kumamoto travel 안내 읽듯 확인하는 연남 클럽 추천정보 체계</a>
+        <p class="post-item__summary">여행 시 Kumamoto travel 안내를 보며 교통편을 먼저 살피는 것처럼, 연남 지역에서 클럽을 찾을 때도 위치와 접근성은 가장 중요한 체크리스트다. 대중교통 이용이 용이한지 혹은 인근에 안전</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0449.html">Kumamoto travel 안내를 통해 살펴본 합정 셔츠룸 추천정보 가이드</a>
+        <p class="post-item__summary">처음 낯선 곳을 방문할 때는 현지 시스템을 제대로 파악하지 못해 당황하는 경우가 많습니다. 비행기를 타고 떠나는 Kumamoto travel 안내 정보를 숙지하는 과정처럼, 합정 지역의 유흥 문화를</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0450.html">Kumamoto travel 안내만큼 중요한 공덕 가라오케 추천정보 활용법</a>
+        <p class="post-item__summary">일부 사람들은 가라오케가 밤늦은 시간에만 즐기는 곳이라는 고정관념을 가지고 있습니다. 마치 Kumamoto travel 안내 글에서 볼 수 있는 여행 코스가 낮과 밤에 따라 크게 달라지는 것처럼, </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0451.html">Kumamoto travel 안내와 함께 알아보는 상수 마사지 추천정보</a>
+        <p class="post-item__summary">쾌적한 마사지 서비스를 받기 위해서는 청결한 시설, 숙련된 관리사의 실력, 합리적인 비용이라는 세 가지 요소가 충족되어야 합니다. 우리가 Kumamoto travel 안내 정보를 보며 최적의 숙소를</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/qa-001-sg2ec3.html">Kumamoto travel 안내</a>
+        <p class="post-item__summary">구마모토는 규슈 지방의 중심부에 위치하여 자연과 역사가 조화롭게 어우러진 매력적인 여행지입니다. 이곳은 웅장한 성곽과 활발한 화산 활동이 만들어낸 독특한 지형으로 유명하며, 많은 여행객이 방문하는 </p>
+      </li>
+      </ul>
+    <nav class="pager">
+      <a class="pager__link" href="posts.html">1</a>
+      <span class="pager__current">2</span>
+    </nav>
+    </main>
+  </div>
+</body>
+</html>
